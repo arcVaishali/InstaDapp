@@ -1,0 +1,24 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+:root{
+    --gradient: linear-gradient(to right , #e2336b , #fcac46);
+}
+.post-dialog-card{
+    display: flex;
+    align-items:"center";
+    justify-content: "center";
+    background-color: black;
+    /* color:black; */
+    /* border-radius: 20px;
+    width: 50vw;
+    height: 50vh;
+} */
+
+/* .btn{
+    display: flex ;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--gradient);
+    margin: 1rem ;
+/* } */ 

@@ -2,11 +2,11 @@ import React from "react";
 
 const StoryArea = () => {
   return (
-    <div class="stories-title">
+    <div className="stories-title">
       <h1>Stories</h1>
-      <a href="" class="btn">
-        <i class="ri-play-circle-line"></i>
-        <div class="text">Watch all</div>
+      <a href="" className="btn">
+        <i className="ri-play-circle-line"></i>
+        <div className="text">Watch all</div>
       </a>
     </div>
   );

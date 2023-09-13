@@ -4,14 +4,14 @@ import AddPostButton from "./AddPostButton";
 
 const MainHeader = () => {
   return (
-    <div class="header">
-      <div class="search">
-        <i class="ri-search-line"></i>
+    <div className="header">
+      <div className="search">
+        <i className="ri-search-line"></i>
         <input type="text" placeholder="Search" name="" id="" />
       </div>
-      <div class="header-content">
-        <i class="ri-notification-4-fill"></i>
-        <i class="ri-mail-unread-fill"></i>
+      <div className="header-content">
+        <i className="ri-notification-4-fill"></i>
+        <i className="ri-mail-unread-fill"></i>
 
         <AddPostButton/>
         <ConnectWallet/>
