@@ -11,11 +11,11 @@ import FeedTitle from '../components/FeedTitle';
 
 const PostTimeline = () => {
   return (
-    <div class="main-home">
+    <div className="main-home">
         <RemixIco/>
         <MainHeader/>
         <StoryArea/>
-        <div class="stories">
+        <div className="stories">
             <StoryAdd/>
              
             <StoryCard/>
@@ -33,7 +33,7 @@ const PostTimeline = () => {
         
         <FeedTitle/>
        
-        <div class="main-posts">
+        <div className="main-posts">
             <PostCard/>
             <PostCard/>
             <PostCard/>
