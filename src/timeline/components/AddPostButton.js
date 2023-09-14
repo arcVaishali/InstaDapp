@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AddPostButton = () => {
   return (
-    <Link to="/post" className="btn">
+    <Link to="/addpost" className="btn">
       <i className="ri-add-circle-fill"></i>
       <div className="btn-text">Add Photo</div>
     </Link>
