@@ -15,8 +15,10 @@ Checklist- (MVP)
 Other feature to be added- (Great)
 - [ ] User Profile (info about each NFT by given user, like floor price, total volume etc shown)
 - [ ] User Authentication
+      
 and more
 
 Extra features- (Super Great)
 - [ ] Active likes, comments section
+      
 and more
