@@ -5,8 +5,8 @@ import "../pages/Sidebar.css"
 const Settings = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-settings-5-line"></i>
+      <span className="icon">
+        <i className="ri-settings-5-line"></i>
       </span>
       Setting
     </Link>

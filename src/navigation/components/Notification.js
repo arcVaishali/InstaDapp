@@ -5,8 +5,8 @@ import "../pages/Sidebar.css"
 const Notification = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-notification-4-line"></i>
+      <span className="icon">
+        <i className="ri-notification-4-line"></i>
       </span>
       Notification
     </Link>

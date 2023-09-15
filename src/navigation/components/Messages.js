@@ -5,8 +5,8 @@ import "../pages/Sidebar.css"
 const Messages = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-mail-unread-line"></i>
+      <span className="icon">
+        <i className="ri-mail-unread-line"></i>
       </span>
       Messages
     </Link>

@@ -3,7 +3,7 @@ import "../pages/Sidebar.css"
 
 const CountPost = () => {
   return (
-    <div class="box">
+    <div className="box">
     <h3>54</h3>
     <span>Posts</span>
   </div>
