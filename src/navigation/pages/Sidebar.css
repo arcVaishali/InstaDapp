@@ -96,6 +96,7 @@ body {
 .box span {
    font-size: 0.938rem;
    font-weight: 400;
+   margin:10px;
 }
 
 .menu a{
