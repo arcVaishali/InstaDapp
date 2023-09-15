@@ -5,8 +5,8 @@ import "../pages/Sidebar.css";
 const Direct = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-send-plane-fill"></i>
+      <span className="icon">
+        <i className="ri-send-plane-fill"></i>
       </span>
       Direct
     </Link>

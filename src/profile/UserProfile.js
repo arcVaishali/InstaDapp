@@ -5,8 +5,13 @@ import CountPost from "../navigation/components/CountPost";
 import Profile from "../navigation/components/Profile";
 import "./UserProfile.css";
 import PostWithStyle from "../timeline/components/PostWithStyle";
+import NFTInfo from "../dailog/NFTInfo";
 
 const UserProfile = () => {
+  const displayNFTInfo = () => {
+    const ele = document.getElementById("Info");
+    ele.style.display="flex"; 
+  }
   return (
     <div className="user-profile">
       <div className="user-header">
@@ -39,7 +44,7 @@ const UserProfile = () => {
       </div>
 
       <div className="post-nfts-areas">
-        <div className="style">
+        <div className="style" onClick={ displayNFTInfo }>
           <PostWithStyle />
         </div>
         <div className="style">
@@ -63,6 +68,8 @@ const UserProfile = () => {
         <div className="style">
           <PostWithStyle />
         </div>
+
+        <NFTInfo/>
       </div>
     </div>
   );

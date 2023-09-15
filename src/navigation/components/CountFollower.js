@@ -3,7 +3,7 @@ import "../pages/Sidebar.css";
 
 const CountFollower = () => {
   return (
-    <div class="box">
+    <div className="box">
       <h3>4.4k</h3>
       <span>Followers</span>
     </div>

@@ -12,7 +12,7 @@ import Logout from './Logout'
 
 const Menu = () => {
   return (
-    <div class="menu">
+    <div className="menu">
         <Feed/>
         <Explore/>
         <Notification/>

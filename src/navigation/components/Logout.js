@@ -5,8 +5,8 @@ import "../pages/Sidebar.css"
 const Logout = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-logout-box-r-line"></i>
+      <span className="icon">
+        <i className="ri-logout-box-r-line"></i>
       </span>
       Logout
     </Link>

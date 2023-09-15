@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const InstaLogo = () => {
   return (
-    <Link href="#" class="logo">
+    <Link href="#" className="logo">
       
       <img src="https://cdn.freelogodesign.org/files/728c6f8103f5428cbeca2ff195c1dca1/thumb/logo_200x200.png?v=638301967340000000" alt="" />
       {/* https://cdn.freelogodesign.org/files/728c6f8103f5428cbeca2ff195c1dca1/thumb/logo_200x200.png?v=0 */}

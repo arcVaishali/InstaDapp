@@ -4,9 +4,9 @@ import "../pages/Sidebar.css"
 
 const Feed = () => {
   return (
-    <Link href="" class="active">
-      <span class="icon">
-        <i class="ri-function-line"></i>
+    <Link href="" className="active">
+      <span className="icon">
+        <i className="ri-function-line"></i>
       </span>
       Feed
     </Link>

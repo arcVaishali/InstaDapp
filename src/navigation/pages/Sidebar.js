@@ -11,12 +11,12 @@ import InstaLogo from "../components/InstaLogo";
 
 const Sidebar = () => {
   return (
-    <div class="sidebar">
+    <div className="sidebar">
       <RemixIco />
       <InstaLogo />
       <Profile />
      
-      <div class="about">
+      <div className="about">
         <CountPost />
         <CountFollower />
         <CountFollowing />

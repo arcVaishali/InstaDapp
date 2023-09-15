@@ -5,8 +5,8 @@ import "../pages/Sidebar.css";
 const Explore = () => {
   return (
     <Link href="#">
-      <span class="icon">
-        <i class="ri-search-line"></i>
+      <span className="icon">
+        <i className="ri-search-line"></i>
       </span>
       Explore
     </Link>
