@@ -79,5 +79,75 @@ var upload = multer({storage : storage}).single('image')
         }
     })
  });
+ // Add a comment to a post
+router.route("/Posts/:postId/comments").post( async (req, res) => {
+    try {
+      const postId = req.params.postId;
+      const post = await Image.findById(postId);
+      //console.log(post)
+  
+      if (!post) {
+        return res.status(404).json({ error: 'Post not found' });
+      }
+  
+      // Create a new comment
+      const newComment = {
+        userName: req.body.userName,
+        text: req.body.text,
+        
+      };
+  console.log(newComment)
+      // Add the comment to the post's comments array
+      post.comments.push(newComment);
+  
+      // Save the updated post
+      const savedPost = await post.save();
+  
+      res.json(savedPost);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
+  // Retrieve comments for a post
+  router.route("/Posts/:postId/comments").get(async (req, res) => {
+    try {
+      const postId = req.params.postId;
+      const post = await Image.findById(postId);
+  
+      if (!post) {
+        return res.status(404).json({ error: 'Post not found' });
+      }
+  
+      res.json(post.comments);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
+  router.route("/Posts/:postId/like").put(async(req,res)=>{
+    try{  
+      const postId = req.params.postId;
+      const post = await Image.findById(postId);
+      if (!post) {
+        return res.status(404).json({ error: 'Post not found' });
+      }
+      console.log(post.like);
+      post.like+=1
+      const updatedPost = await post.save();
+
+      res.json(updatedPost);
+  
+
+    }
+
+    catch(error){
+      console.error(error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  })
+  
 
  module.exports =router;
