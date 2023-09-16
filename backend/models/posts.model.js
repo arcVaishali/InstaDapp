@@ -11,19 +11,19 @@ const postSchema = new Schema({
         type:String ,
         required: false,
         },
-    like:{
-        type : Number,
-        default : 0,
-        },
-    comment :[{
-        type : Schema.Types.ObjectId,
-        ref : 'Comments'
-    }],
+    // like:{
+    //     type : Number,
+    //     default : 0,
+    //     },
+    // comment :[{
+    //     type : Schema.Types.ObjectId,
+    //     ref : 'Comments'
+    // }],
     
-    imageUrl : [{
-        type : Schema.Types.ObjectId,
-        ref : 'Image'
-    }],
+    // imageUrl : [{
+    //     type : Schema.Types.ObjectId,
+    //     ref : 'Image'
+    // }],
 
     mint : {
         type:Boolean,

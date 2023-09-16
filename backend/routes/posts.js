@@ -24,12 +24,13 @@ var upload = multer({storage : storage}).single('image')
            const base64Image = Buffer.from(image.img.data).toString("base64");
 
           return {
-            name: image.name,
-            desc: image.desc,
+            userName: image.userName,
+            postTitle: image.postTitle,
             img: {
               contentType: image.img.contentType,
               data: base64Image,
-              //data: image.img.data
+              mint:image.mint,
+              like:image.like
             },
           };
         });
@@ -56,12 +57,14 @@ var upload = multer({storage : storage}).single('image')
         }
         else{
             const newImage = new Image({
-                name : req.body.name,
-                desc : req.body.desc,
+                userName : req.body.userName,
+                postTitle : req.body.postTitle,
                 img  :{
                     data: fs.readFileSync(path.join(__dirname , '../uploads/' + req.file.filename)),
                     contentType  : "image/jpeg"
-                }
+                },
+                mint : req.body.mint
+
             })
             newImage.save()
             .then(()=>{
