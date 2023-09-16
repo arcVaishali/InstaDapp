@@ -13,7 +13,7 @@ Checklist- (MVP)
 - [ ] Convert image to NFT
 
 Other feature to be added- (Great)
-- [ ] User Profile (info about each NFT by given user, like floor price, total volume etc shown)
+- [x] [--User Profile frontend complete] User Profile (info about each NFT by given user, like floor price, total volume etc shown)
 - [x] User Authentication
       
 and more
