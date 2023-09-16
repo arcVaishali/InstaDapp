@@ -29,9 +29,9 @@ var upload = multer({storage : storage}).single('image')
             img: {
               contentType: image.img.contentType,
               data: base64Image,
-              mint:image.mint,
-              like:image.like
             },
+            mint:image.mint,
+            like:image.like,
           };
         });
         //console.log(imagesWithBase64)
@@ -79,6 +79,22 @@ var upload = multer({storage : storage}).single('image')
         }
     })
  });
+
+ router.route("/getPostId").get(async (req,res)=>{
+    try{
+      const image = await Image.find({ 
+        userName : req.body.userName,
+      });
+      res.send(image);
+
+    }
+    catch (err) {
+      console.log(err);
+      res.status(500).json({ error: 'Server error' });
+    }
+ })
+
+
  // Add a comment to a post
 router.route("/Posts/:postId/comments").post( async (req, res) => {
     try {
