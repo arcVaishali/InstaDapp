@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   top: 10px;
   left: 200px;
@@ -31,11 +31,10 @@
   text-align: center;
   height: 8vh;
   width: 20vw;
-  position: relative;
+  /* position: relative;
   top: 200px;
-  left: 53px;
+  left: 53px; */
 }
-
 
 .post-file-input{
     padding: 20px;

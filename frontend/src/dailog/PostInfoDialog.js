@@ -7,7 +7,6 @@ import PostWithStyle from "../timeline/components/PostWithStyle";
 import "./postInfoDialog.css";
 import { useState, useEffect } from "react";
 
-
 const PostInfoDialog = () => {
   const [text, setText] = useState({
     name: "",
@@ -61,82 +60,76 @@ const PostInfoDialog = () => {
     <>
       <RemixIco />
       <div className="container">
-        <form className="form-box" action="/" method="POST" enctype="multipart/form-data">
-        <div
-           className="field"
+        <form
+          className="form-box"
+          action="/"
+          method="POST"
+          enctype="multipart/form-data"
         >
-          Select from your computer
-          <input
-            className="post-file-input"
-            type="file"
-            accept=".png, .jpg, .jpeg"
-            name="photo"
-            onChange={setPhoto}
-          />
-        </div>
-{
-           /* TITLE/HEADER FOR POST? */
-}
+          <div className="field">
+            Select from your computer
+            <input
+              className="post-file-input"
+              type="file"
+              accept=".png, .jpg, .jpeg"
+              name="photo"
+              onChange={setPhoto}
+            />
+          </div>
+          {/* TITLE/HEADER FOR POST? */}
           <div className="field">
             <label for="name">Name</label>
-            <input  
+            <input
               type="text"
               id="name"
               name="name"
               value={text.name}
               onChange={handleChange}
               placeholder="Name"
-              required 
+              required
             />
           </div>
 
-{
-           /* CAPTION INPUT? */
-}
+          {/* CAPTION INPUT? */}
           <div className="field">
             <label for="desc">Enter Caption</label>
-            <textarea 
-             rows="10"
-             type="text"
-             id="desc"
-             name="desc"
-             value={text.desc}
-             onChange={handleChange}
-             placeholder="Caption"
-             required />
+            <textarea
+              rows="10"
+              type="text"
+              id="desc"
+              name="desc"
+              value={text.desc}
+              onChange={handleChange}
+              placeholder="Caption"
+              required
+            />
           </div>
 
-
-{
-  /* DO YOU WANT TO MAKE THIS CREATION?POST NFT?? */
-}
+          {/* DO YOU WANT TO MAKE THIS CREATION?POST NFT?? */}
           <div className="field">
-            <label for="mint">
-              Do you want to make this creation an NFT?
-            </label>
+            <label for="mint">Do you want to make this creation an NFT?</label>
             <input
               type="radio"
               id="mint"
-              name="mint" 
+              name="mint"
               value="mint"
-              style={{ marginLeft: "20px" }}
+              style={{ marginLeft: "20px", marginTop:"-15px" }}
               required
-              />
+            />
           </div>
 
-{
-  /* OTHER FIELDS--?? */
-}
-          
-{         /* <div className="field">
+{/*        OTHER FIELDS--??  
+*/}
+
+{/*       <div className="field">
               <label for="caption">Info2</label>
                   <input type="text" name="caption" />
-             </div> */ 
-}
+          </div> 
+*/}
+        <button type="submit" onClick={post} className="submit-button-style">
+          <Link to="/homepage">Submit</Link>
+        </button>
         </form>
-        <Link type="submit" onClick={post} className="submit-button-style" to="/">
-          Submit
-        </Link>
       </div>
     </>
   );

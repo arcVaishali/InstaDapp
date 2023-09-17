@@ -29,6 +29,7 @@ const Login = () => {
     };
     try {
       const response = await fetch(url, options);
+      events(response.token);
       console.log(response);
     } catch (error) {
       console.log(error);
@@ -42,11 +43,11 @@ const Login = () => {
   // =========================
   // EVENTS (get token from login)
   // =========================
-  const events = async()=>{
+  const events = async(token)=>{
     const url ='http://localhost:3001/auth/events';
     const options = {
         method:'GET',
-        haeders:{
+        headers:{
             Authorization:`${token}`
         }
     }
@@ -67,7 +68,7 @@ const Login = () => {
           className="form-boxer"
           action="/"
           method="POST"
-          enctype="multipart/form-data"
+          encType="multipart/form-data"
         >
           {/* ======================= */}
           {/* USERNAME? */}
@@ -124,9 +125,9 @@ const Login = () => {
                   <input type="text" name="caption" />
              </div> */}
         </form>
-        <button type="submit" onClick={IDontKnow} className="submit-button">
+        <button type="submit" onClick={login} className="submit-button">
           <Link  to="/homepage">
-            Submit
+            Login
           </Link>
         </button>
       </div>

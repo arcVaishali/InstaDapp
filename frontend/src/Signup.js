@@ -16,12 +16,22 @@ const Signup = () => {
   // ========================
   // =========SIGNUP=========
   // ========================
-  const signUP = async (e) => {
-    e.preventDefault();
+  const signUP = async (event) => {
+    event.preventDefault();
+    // let username = document.getElementById('userName').value;
+    // let email = document.getElementById('email').value;
+    // let password = document.getElementById('password').value;
+    // const userData ={
+    //   userName: username,
+    //   email: email,
+    //   password : password
+    // }
+    // console.log( userData.userName );
     const formData = new FormData();
     formData.append("userName", text.userName);
     formData.append("email", text.email);
     formData.append("password", text.password);
+    console.log(formData.userName);
     const url = "https://localhost:3001/auth/signup";
     const options = {
       method: "POST",
@@ -38,6 +48,7 @@ const Signup = () => {
   // ========================
   // ========================
   const handleChange = (e) => {
+    e.preventDefault();
     setText({ ...text, [e.target.name]: e.target.value });
   };
   return (
@@ -47,7 +58,7 @@ const Signup = () => {
           className="form-boxer"
           action="/"
           method="POST"
-          enctype="multipart/form-data"
+          encType="multipart/form-data"
         >
           {/* ======================= */}
           {/* USERNAME? */}
@@ -97,16 +108,10 @@ const Signup = () => {
             />
           </div>
 
-          {/* OTHER FIELDS--?? */}
-
-          {/* <div className="field">
-              <label for="caption">Info2</label>
-                  <input type="text" name="caption" />
-             </div> */}
         </form>
         <button type="submit" onClick={signUP} className="submit-button">
-          <Link  to="">
-            Submit
+          <Link  to="/login">
+            Sign up
           </Link>
         </button>
       </div>
