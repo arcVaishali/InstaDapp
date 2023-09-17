@@ -4,100 +4,137 @@ import RemixIco from "../navigation/components/RemixIco";
 import { Link } from "react-router-dom";
 import Creation from "../timeline/components/Creation";
 import PostWithStyle from "../timeline/components/PostWithStyle";
+import "./postInfoDialog.css";
+import { useState, useEffect } from "react";
+
 
 const PostInfoDialog = () => {
+  const [text, setText] = useState({
+    name: "",
+    desc: "",
+    image: null,
+  });
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    async function fetchImage() {
+      const url = "http://localhost:3001/posts/Posts";
+      const options = {
+        method: "GET",
+      };
+      try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        console.log(data);
+        setImages(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchImage();
+  }, []);
+  const post = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("name", text.name);
+    formData.append("desc", text.desc);
+    formData.append("image", text.image);
+    formData.append("mint", text.mint);
+    const url = "http://localhost:3001/posts/Posts";
+    const options = {
+      method: "POST",
+      body: formData,
+    };
+    try {
+      const response = await fetch(url, options);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const handleChange = (e) => {
+    setText({ ...text, [e.target.name]: e.target.value });
+  };
+  const setPhoto = (e) => {
+    setText({ ...text, image: e.target.files[0] });
+  };
   return (
     <>
       <RemixIco />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          position: "relative",
-          top: "10px",
-          left: "200px",
-          backgroundColor: "#ffffff",
-          color: "black",
-          borderRadius: "20px",
-          width: "70vw",
-          // height: "95vh",
-        }}
-      >
+      <div className="container">
+        <form className="form-box" action="/" method="POST" enctype="multipart/form-data">
         <div
-          style={{
-            padding: "20px",
-            margin: "10px",
-          }}
+           className="field"
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "10px",
-              margin: "5px",
-            }}
-          >
-            <label htmlFor="caption">Enter Caption</label>
-            <textarea rows="10" type="text" name="caption" />
+          Select from your computer
+          <input
+            className="post-file-input"
+            type="file"
+            accept=".png, .jpg, .jpeg"
+            name="photo"
+            onChange={setPhoto}
+          />
+        </div>
+{
+           /* TITLE/HEADER FOR POST? */
+}
+          <div className="field">
+            <label for="name">Name</label>
+            <input  
+              type="text"
+              id="name"
+              name="name"
+              value={text.name}
+              onChange={handleChange}
+              placeholder="Name"
+              required 
+            />
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "10px",
-              margin: "5px",
-            }}
-          >
-            <label htmlFor="caption">Info1</label>
-            <input type="text" name="caption" />
+{
+           /* CAPTION INPUT? */
+}
+          <div className="field">
+            <label for="desc">Enter Caption</label>
+            <textarea 
+             rows="10"
+             type="text"
+             id="desc"
+             name="desc"
+             value={text.desc}
+             onChange={handleChange}
+             placeholder="Caption"
+             required />
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "10px",
-              margin: "5px",
-            }}
-          >
-            <label htmlFor="caption">Info2</label>
-            <input type="text" name="caption" />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              padding: "10px",
-              margin: "5px",
-            }}
-          >
-            <label htmlFor="NFTorNotNFT">
+
+{
+  /* DO YOU WANT TO MAKE THIS CREATION?POST NFT?? */
+}
+          <div className="field">
+            <label for="mint">
               Do you want to make this creation an NFT?
             </label>
             <input
-              style={{ marginLeft: "20px" }}
               type="radio"
-              name="NFTorNotNFT"
-            />
+              id="mint"
+              name="mint" 
+              value="mint"
+              style={{ marginLeft: "20px" }}
+              required
+              />
           </div>
-        </div>
-        <Link
-          to="/"
-          style={{
-            padding: "10px",
-            borderRadius: "8px",
-            background:
-              "linear-gradient(to right, rgb(226, 51, 107), rgb(252, 172, 70))",
-            margin: "1rem",
-            textAlign: "center",
-            height: "8vh",
-            width: "20vw",
-            position: "relative",
-            top: "415px",
-            left: "53px",
-          }}
-        >
+
+{
+  /* OTHER FIELDS--?? */
+}
+          
+{         /* <div className="field">
+              <label for="caption">Info2</label>
+                  <input type="text" name="caption" />
+             </div> */ 
+}
+        </form>
+        <Link type="submit" onClick={post} className="submit-button-style" to="/">
           Submit
         </Link>
       </div>
