@@ -1,7 +1,3 @@
-# InstaDapp
-
-A platform where insta creators and influencers can convert their insta artworks, creations, poetries etc into NFT, and keep their creations protected and monetized.
-
 ## Inspiration 
 The inspiration behind **InstaDapp** lies at the *intersection of two dynamic and transformative technologies: social media and blockchain.* In today's digital age, social media platforms have become a cornerstone of communication, fostering communities and enabling content creators to connect with their audience. Meanwhile, blockchain technology, with its promise of decentralization, security, and transparency, has sparked a revolution in the way we think about ownership and digital assets.
 
@@ -19,9 +15,9 @@ However, the **real magic** happens when users connect their MetaMask wallets. T
 ## How we built it
 Building **InstaDapp** involved a multidisciplinary approach, blending **web development**, **blockchain technology**, and **user interface design**. Here are the key components of our journey:
 
-- Frontend Development: We designed an intuitive and aesthetically pleasing user interface, mirroring the familiar Instagram experience. This involved React.js, HTML, CSS, and JavaScript.
+- Frontend Development: We designed an intuitive and aesthetically pleasing user interface, mirroring the familiar Instagram experience. This involved React.js, HTML, CSS, and JavaScript. We made sure to keep the design of our web3site simple and familiar. Also as part of our Minimum Viable Product, we have incorporated limited functionality into the project but we aim to leverage this project add many other real time, location specific and dynamic data.
 
-- Backend Development: Our backend, powered by robust server-side technologies, handles user authentication, post storage, and profile management. This involved Node.js and for the database part we used MongoDB.
+- Backend Development: Our backend, powered by robust server-side technologies, handles user authentication, post storage, and profile management. This involved Node.js and for the database part we used MongoDB. Our backend and database is robust and neatly coded with features like likes, comments, auth, signup, login, POST posts in the database and GET posts from the database, though some of these functionalities couldn't be integarted with the frontend due to shortage of time like, likes and comments functionality.
 
 - Blockchain Integration: The heart of **InstaDapp** is its integration ..............................,allowing users to mint NFTs from their posts.
 
@@ -29,22 +25,26 @@ Building **InstaDapp** involved a multidisciplinary approach, blending **web dev
 
 ## Challenges we ran into
 Building InstaDapp came with its fair share of challenges:
-- Blockchain Complexity: Understanding and working with blockchain technology presented a steep learning curve, especially for members of the team who were new to it.
+- Blockchain Complexity: Understanding and working with blockchain technology presented a steep learning curve. We were totally new to blockchain development and it is are very first time hacking and building a web3site. Resources and workshops provided were efficient for us to walk through Bunzz and use it, though at the last moment we started to encounter issues with using Bunzz smart contracts to mint NFT but overall we had great time learning from the community and engaging in community discussions.
 
-- Scalability: As we envision InstaDapp to grow, ensuring scalability and efficient handling of user-generated content became a concern.
+- Frontend and Backend Integration: Our team also had difficulty in integrating frontend with the backend at some points of time. However we could integrate many of the core functionalities like, signup, login, add posts and mint posts features. 
 
 - User Experience: Striking a balance between a user-friendly, Instagram-like interface and the complexities of blockchain proved challenging but essential.
 
-- Security: Ensuring the security of user data and assets on a decentralized platform required meticulous attention to detail.
+<!-- 
+- Security: Ensuring the security of user data and assets on a decentralized platform required meticulous attention to detail. 
+-->
 
 ## Accomplishments that we're proud of
 Throughout our journey, we've achieved several milestones that fill us with pride:
 
-- Seamless Integration: We successfully integrated blockchain technology into a user-friendly interface, making NFT creation accessible to a broad audience.
+- Seamless Integration: We successfully integrated blockchain technology into a user-friendly interface, making NFT creation accessible to a broad audience. No matter how hard the going was, we were able to come up with MVP of our idea. 
 
-- User Adoption: Witnessing users enthusiastically embrace InstaDapp and create their NFTs has been immensely rewarding.
+- Friendly and Engaging Frontend: We have successfully built a user friendly and engaging frontend using React.js and other frontend tools.
 
-- Community Engagement: We've fostered an engaged and passionate community of content creators, further strengthening our belief in the project's potential.
+- Community Engagement: We've fostered an engaged and passionate community of content creators, further strengthening our belief in the project's potential. 
+
+- Building Connections- We had fun hacking throughout the timeline, meeting new people, interacting with people on Spheron Discord community and going through docs, attending workshops and making friends. 
 
 ## What we learned
 Our journey with InstaDapp has been a continuous learning experience:
@@ -53,7 +53,13 @@ Our journey with InstaDapp has been a continuous learning experience:
 
 - User-Centric Design: Balancing the technical intricacies of blockchain with a user-centric design philosophy is paramount.
 
-- Community Matters: Building a supportive and engaged user community is crucial for the success of decentralized platforms.
+- Community Matters: Building a supportive and engaged user community is crucial for the success of decentralized platforms. 
+
+- About NFTs- We learnt a lot about NFTs and minting NFTs. They have revolutionized the digital landscape by offering a groundbreaking way to represent ownership and authenticity in the virtual realm. 
+
+- Bunzz Platform- We learnt a lot about Bunzz, it's various products, documentation, community forums and it's huge set of existing smart contracts. 
+
+- Building a robust backend- We also got hands on experience in building robust backend and database of our project using Node.js and MongoDB.
 
 ## What's next for InstaDapp
 The journey for InstaDapp has only just begun. Our future goals include:
@@ -85,25 +91,4 @@ With gratitude and excitement,
 - [Vaishali](https://github.com/arcVaishali)
 - [Deepak Shah](https://github.com/Deepak2030)
 
-<!--
-Checklist- (MVP)
-- [x] Homepage frontend created
-- [x] Wallet connect feature added
-- [x] Add Post Dialog Box created
-- [x] Add Caption and other info dialog box created
-- [x] POST image in database 
-- [x] GET image from database
-- [x] Show fetched image in the homepage (dynamic homepage data (live posts, right now posts are static)) 
-- [x] Convert image to NFT
 
-Other feature to be added- (Great)
-- [x] [--User Profile frontend complete] User Profile (info about each NFT by given user, like floor price, total volume etc shown)
-- [x] User Authentication
-      
-and more
-
-Extra features- (Super Great)
-- [X] Active likes, comments section
-      
-and more
--->
