@@ -1,6 +1,6 @@
 # InstaDapp
 
-A platform where insta creators and influencers can convert their insta artworks, creations, poetries etc into NFT.
+A platform where insta creators and influencers can convert their insta artworks, creations, poetries etc into NFT, and keep their creations protected and monetized.
 
 ## Inspiration 
 The inspiration behind **InstaDapp** lies at the *intersection of two dynamic and transformative technologies: social media and blockchain.* In today's digital age, social media platforms have become a cornerstone of communication, fostering communities and enabling content creators to connect with their audience. Meanwhile, blockchain technology, with its promise of decentralization, security, and transparency, has sparked a revolution in the way we think about ownership and digital assets.
