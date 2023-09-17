@@ -6,6 +6,7 @@ import Profile from "../navigation/components/Profile";
 import "./UserProfile.css";
 import PostWithStyle from "../timeline/components/PostWithStyle";
 import NFTInfo from "../dailog/NFTInfo";
+import PrimaryButton from "../AppComponents/PrimaryButton";
 
 const UserProfile = () => {
   const displayNFTInfo = () => {
@@ -21,24 +22,28 @@ const UserProfile = () => {
         <div className="user-info">
           <div className="NFT-info">
             <div className="info">
-              <h3>Info1</h3>
-              <span>Information</span>
+              <h3>5️⃣➕</h3>
+              <span>NFTs</span>
             </div>
 
             <div className="info">
-              <h3>Info1</h3>
-              <span>Information</span>
+              <h3>Greater Noida</h3>
+              <span>💚</span>
             </div>
 
             <div className="info">
-              <h3>Info1</h3>
-              <span>Information</span>
+              <h3>Life is beautiful!</h3>
+              <span>⭐⭐⭐⭐⭐</span>
             </div>
           </div>
           <div className="basic-info">
             <CountFollower />
             <CountFollowing />
             <CountPost />
+          </div>
+          <div className="basic-info">
+            <PrimaryButton text="Following"/>
+            <PrimaryButton text="Followers"/>
           </div>
         </div>
       </div>
