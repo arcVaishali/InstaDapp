@@ -1,36 +1,18 @@
 const mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-const postSchema = new Schema({
-    userName : {
+const userSchema = new Schema({
+    userName:{
         type: String,
-        unique : true,
-        required : true
+        unique:true
     },
-    postTitle:{
-        type:String ,
-        required: false,
-        },
-    like:{
-        type : Number,
-        default : 0,
-        },
-    comment :[{
-        type : Schema.Types.ObjectId,
-        ref : 'Comments'
-    }],
-    
-    imageUrl : [{
-        type : Schema.Types.ObjectId,
-        ref : 'Image'
-    }],
+    email :{
+        type: String,
+        unique:true
+    },
+    password : String
 
-    mint : {
-        type:Boolean,
-        default:false
-    }
-       
 })
+const User = mongoose.model('User', userSchema);
 
-const Posts = mongoose.model('Posts',postSchema);
-module.exports=Posts
+module.exports = User;

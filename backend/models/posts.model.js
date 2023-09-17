@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-
+const Comment = require("./comment.model")
+const User = require("./user.model");
+const Image = require("./image.model");
 const postSchema = new Schema({
     userName : {
         type: String,
@@ -17,14 +19,16 @@ const postSchema = new Schema({
         },
     comment :[{
         type : Schema.Types.ObjectId,
-        ref : 'Comments'
+        ref : Comment
     }],
-    
     imageUrl : [{
         type : Schema.Types.ObjectId,
-        ref : 'Image'
+        ref : Image
     }],
-
+    likes: [{
+        type: Schema.Types.ObjectId,
+        ref: User
+    }],
     mint : {
         type:Boolean,
         default:false
