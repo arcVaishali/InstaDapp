@@ -30,7 +30,7 @@ Building **InstaDapp** involved a multidisciplinary approach, blending **web dev
 
 - Backend Development: Our backend, powered by robust server-side technologies, handles user authentication, post storage, and profile management. This involved Node.js and for the database part we used MongoDB. Our backend and database is robust and neatly coded with features like likes, comments, auth, signup, login, POST posts in the database and GET posts from the database, though some of these functionalities couldn't be integarted with the frontend due to shortage of time like, likes and comments functionality.
 
-- Blockchain Integration: The heart of **InstaDapp** is its integration ..............................,allowing users to mint NFTs from their posts.
+- Blockchain Integration: The heart of **InstaDapp** is its Solana integration allowing users to mint NFTs from their posts.
 
 - MetaMask Integration: We seamlessly integrated MetaMask, a popular Ethereum wallet, ensuring that users can interact with the blockchain securely, using React and Metamask API. We utilized the fact that if user has Metamask Browser Extension installed then Metamask automatically injects Metamask API into the global window object, and we can further use this to build connect wallet functionality by fetching ```window.ethereum``` and using ```eth_accounts``` , ```eth_requestAccounts``` etc. to successfully connect account.
 
