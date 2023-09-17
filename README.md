@@ -5,7 +5,7 @@ A platform where insta creators and influencers can convert their insta artworks
 ## Inspiration 
 The inspiration behind **InstaDapp** lies at the *intersection of two dynamic and transformative technologies: social media and blockchain.* In today's digital age, social media platforms have become a cornerstone of communication, fostering communities and enabling content creators to connect with their audience. Meanwhile, blockchain technology, with its promise of decentralization, security, and transparency, has sparked a revolution in the way we think about ownership and digital assets.
 
-Our inspiration was to blend these two worlds, **creating a platform that empowers content creators, influencers, and everyday users to take control of their digital creations by converting them into Non-Fungible Tokens (NFTs).**In essence, we sought to build a bridge between the vibrant social media landscape and the burgeoning NFT ecosystem, offering users a seamless way to mint NFTs from their prized content.
+Our inspiration was to blend these two worlds, **creating a platform that empowers content creators, influencers, and everyday users to take control of their digital creations by converting them into Non-Fungible Tokens (NFTs).** In essence, we sought to build a bridge between the vibrant social media landscape and the burgeoning NFT ecosystem, offering users a seamless way to mint NFTs from their prized content.
 
 ## What it does 
 **InstaDapp** is more than just an Instagram-like interface; it's a gateway to the world of decentralized ownership. At its core, InstaDapp allows users to:
