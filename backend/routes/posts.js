@@ -80,19 +80,26 @@ var upload = multer({storage : storage}).single('image')
     })
  });
 
- router.route("/getPostId").get(async (req,res)=>{
-    try{
-      const image = await Image.find({ 
-        userName : req.body.userName,
-      });
-      res.send(image);
+ router.route("/getPostId").get(async (req, res) => {
+  try {
+    const userName = req.query.userName;
+    const postTitle = req.query.postTitle;
+    const mint = req.query.mint;
+    const like = req.query.like;
 
-    }
-    catch (err) {
-      console.log(err);
-      res.status(500).json({ error: 'Server error' });
-    }
- })
+    const image = await Image.find({
+      userName,
+      postTitle,
+      mint,
+      like,
+    });
+
+    res.send(image);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
 
 
  // Add a comment to a post
