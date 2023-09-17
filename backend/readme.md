@@ -127,14 +127,16 @@ catch(error){
    Get postId:
 
 const url = 'http://localhost:3001/posts/getPostId';
-const options = {
-    method: 'GET',
-    body:{
+const queryParams = {
         userName : `${userName}`,
         postTitle: " Get Title from input",
         mint : " Add some checkbox or something to tell true or false",
         like : Get it from frontend too
     }
+const options = {
+    method: 'GET',
+    params : queryParams
+    
 
 } 
 try{
