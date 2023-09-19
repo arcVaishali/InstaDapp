@@ -257,8 +257,8 @@ router.route("/Posts/:postId/comments").post( async (req, res) => {
        
         const userName = post.userName;
         const image = post.img.name;
-         //imageUrl = `http://localhost:3001/uploads/${image}`;
-        imageUrl = "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/04/spider-man-tobey-maguire.jpg"
+        imageUrl = `http://localhost:3001/uploads/${image}`;
+        //imageUrl = "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/04/spider-man-tobey-maguire.jpg"
 
 
 
