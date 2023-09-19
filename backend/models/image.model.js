@@ -32,7 +32,8 @@ const imageSchema = new Schema({
         },
     img : {
         data: Buffer,
-        contentType: String
+        contentType: String,
+        name: String
     },
     mint : {
         type:Boolean,
