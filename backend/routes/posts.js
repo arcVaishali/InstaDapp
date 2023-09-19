@@ -288,7 +288,7 @@ router.route("/Posts/:postId/comments").post( async (req, res) => {
         body :JSON.stringify( {
           "wait_for_confirmation": true,
           "wallet": {
-            // "secret_recovery_phrase" : "indoor result cattle what smile debris modify throw brother keen short tray"
+     
             "secret_recovery_phrase" : secret_recovery_phrase
           },
           "return_compiled_transaction": false,
@@ -309,7 +309,7 @@ router.route("/Posts/:postId/comments").post( async (req, res) => {
           "is_mutable": true,
           "is_master_edition": true,
           "seller_fee_basis_points": 100,
-          // "creators":  ["Gf2NsXMsvwKCnthFZ5UUQrR8YXZB6b5CrKLkfeFJQnJZ"]
+        
           "creators":  [public_key]
           ,
           "share": [
